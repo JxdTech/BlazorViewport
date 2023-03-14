@@ -1,6 +1,18 @@
-// This is a JavaScript module that is loaded on demand. It can export any number of
-// functions, and may import other JavaScript modules if required.
+let dotNetRef = null;
 
-export function showPrompt(message) {
-  return prompt(message, 'Type anything here');
+export function initialize(caller) {
+    dotNetRef = caller;
+    window.onresize = reportViewportSizeChanged;
+}
+
+export function getViewportSize() {
+  return {
+    width: window.innerWidth,
+    height: window.innerHeight
+  }
+} 
+
+function reportViewportSizeChanged() {
+    let windowSize = getViewportSize();
+    dotNetRef.invokeMethodAsync("OnViewportSizeChanged", windowSize);
 }

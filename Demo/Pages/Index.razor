@@ -1,3 +1,14 @@
-﻿@page "/"
+﻿@inherits ViewportComponentBase
+@page "/"
 
-<h1>Hello, world!</h1>
+@if(Viewport.IsRendered) {
+    <p style="font-size: 3rem;">
+        Width: <span style="color: gray">@Viewport.ViewportSize.Width</span>
+    </p>
+    <p style="font-size: 3rem;">
+        Height: <span style="color: gray">@Viewport.ViewportSize.Height</span>
+    </p>
+}
+else {
+    <p>Loading ...</p>
+}
