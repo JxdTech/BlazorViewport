@@ -15,8 +15,8 @@ public abstract class ViewportBase : ComponentBase, IViewport
 
     public bool IsRendered { get; private set; }
 
-    public ViewportSize ViewportSize { get; private set; } = new ViewportSize();
-
+    public Breakpoint Breakpoint { get; private set; }
+    
     protected override async Task OnInitializedAsync()
     {
         await base.OnInitializedAsync();
@@ -37,13 +37,11 @@ public abstract class ViewportBase : ComponentBase, IViewport
     }
 
     [JSInvokable]
-    public void OnViewportSizeChanged(ViewportSize viewportSize)
+    public void OnBreakpointChanged(Breakpoint breakpoint)
     {
-        ViewportSize = viewportSize;
+        Breakpoint = breakpoint;
         if (!IsRendered)
-        {
             IsRendered = true;
-        }
         StateHasChanged();
     }
 

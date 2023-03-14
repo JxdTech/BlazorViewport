@@ -6,8 +6,6 @@ public class ViewportOptions
 
     public bool EnableLogging { get; set; } = true;
 
-    public bool NotifyOnBreakpointOnly { get; set; } = true;
-
     public bool NotifyOnInitialize { get; set; } = true;
 
     public Dictionary<Breakpoint, int> BreakpointDefinitions { get; set; } = new Dictionary<Breakpoint, int>()
