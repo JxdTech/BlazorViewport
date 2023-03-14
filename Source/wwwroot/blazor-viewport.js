@@ -13,9 +13,10 @@ export function initialize(caller, options) {
 
 export function getViewportSize() {
   var width = window.innerWidth
+  height = window.innerHeight;
   return {
     width: width,
-    height: window.innerHeight,
+    height: height,
     breakpoint: getBreakpoint(width)
   }
 } 
