@@ -31,11 +31,8 @@ public abstract class ViewportBase : ComponentBase, IViewport
         if (_moduleTask != null && firstRender)
         {
             var browser = await _moduleTask.Value;
-            await browser.InvokeVoidAsync("initialize", DotNetObjectReference.Create(this));
-            ViewportSize = await browser.InvokeAsync<ViewportSize>("getViewportSize");
-            await Task.Delay(2000);
-            IsRendered = true;
-            StateHasChanged();
+            await Task.Delay(1000);
+            await browser.InvokeVoidAsync("initialize", DotNetObjectReference.Create(this), new ViewportOptions());
         }
     }
 
@@ -43,6 +40,10 @@ public abstract class ViewportBase : ComponentBase, IViewport
     public void OnViewportSizeChanged(ViewportSize viewportSize)
     {
         ViewportSize = viewportSize;
+        if (!IsRendered)
+        {
+            IsRendered = true;
+        }
         StateHasChanged();
     }
 
