@@ -1,14 +1,24 @@
 ﻿@inherits ViewportComponentBase
 @page "/"
 
-@if(Viewport.IsRendered) {
-    <p style="font-size: 3rem;">
-        Width: <span style="color: gray">@Viewport.ViewportSize.Width</span>
-    </p>
-    <p style="font-size: 3rem;">
-        Height: <span style="color: gray">@Viewport.ViewportSize.Height</span>
-    </p>
-}
-else {
-    <p>Loading ...</p>
+<div class="viewport-container zindex-bottom">
+    <div class="fs-large">
+        <p>
+            Width: <span class="gray">@Viewport.ViewportSize.Width</span>
+        </p>
+        <p>
+            Height: <span class="gray">@Viewport.ViewportSize.Height</span>
+        </p>
+    </div>
+</div>
+
+@if (!Viewport.IsRendered)
+{
+    <div class="viewport-container zindex-top bg-white">
+    <div class="fs-large">
+        <p class="gray">
+            Loading ...
+        </p>
+    </div>
+</div>
 }
