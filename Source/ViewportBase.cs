@@ -33,7 +33,7 @@ public abstract class ViewportBase : ComponentBase, IViewport
             var browser = await _moduleTask.Value;
             await browser.InvokeVoidAsync("initialize", DotNetObjectReference.Create(this));
             ViewportSize = await browser.InvokeAsync<ViewportSize>("getViewportSize");
-            await Task.Delay(1000);
+            await Task.Delay(2000);
             IsRendered = true;
             StateHasChanged();
         }
