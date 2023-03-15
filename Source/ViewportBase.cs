@@ -30,7 +30,7 @@ public abstract class ViewportBase : ComponentBase, IViewport
         if (options.Exists())
             options.Bind(ViewportOptions);
         _moduleTask = new(() => JSRuntime.InvokeAsync<IJSObjectReference>(
-            "import", "./_content/BlazorViewport/blazor-viewport.js").AsTask());
+            "import", "./_content/JxdTech.BlazorViewport/blazor-viewport.js").AsTask());
     }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
