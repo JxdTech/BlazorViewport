@@ -18,11 +18,13 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Company>Jxd Tech</Company>
     <Product>JxdTech.BlazorViewport</Product>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
 
   <ItemGroup>
-    <None Include="README.md" Pack="true" PackagePath="\"/>
+    <None Include="README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
 
   <ItemGroup>
