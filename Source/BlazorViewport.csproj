@@ -7,9 +7,11 @@
     <PackageId>JxdTech.BlazorViewport</PackageId>
     <Title>BlazorViewport</Title>
     <Authors>Jxd Tech(Ramon D.)</Authors>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
     <Description>Monitors viewport resize and reports breakpoint changes.</Description>
     <Copyright>Copyright (c) 2023 JxdTech</Copyright>
     <PackageProjectUrl>https://github.com/JxdTech/BlazorViewport.git</PackageProjectUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryUrl>https://github.com/JxdTech/BlazorViewport.git</RepositoryUrl>
     <RepositoryType>GitHub</RepositoryType>
     <PackageTags>Blazor Viewport, Breakpoints</PackageTags>
@@ -18,6 +20,10 @@
     <Product>JxdTech.BlazorViewport</Product>
   </PropertyGroup>
 
+
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="\"/>
+  </ItemGroup>
 
   <ItemGroup>
     <SupportedPlatform Include="browser" />
