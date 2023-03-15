@@ -13,15 +13,15 @@ export function initialize(caller, options) {
 
 export function getBreakpoint() {
     let width = window.innerWidth;
-    if (width >= _options.breakpointDefinitions["Xxl"])
+    if (width >= _options.breakpoints["Xxl"])
         return 5;
-    if (width >= _options.breakpointDefinitions["Xl"])
+    if (width >= _options.breakpoints["Xl"])
         return 4;
-    else if (width >= _options.breakpointDefinitions["Lg"])
+    else if (width >= _options.breakpoints["Lg"])
         return 3;
-    else if (width >= _options.breakpointDefinitions["Md"])
+    else if (width >= _options.breakpoints["Md"])
         return 2;
-    else if (width >= _options.breakpointDefinitions["Sm"])
+    else if (width >= _options.breakpoints["Sm"])
         return 1;
     else //Xs
         return 0;
