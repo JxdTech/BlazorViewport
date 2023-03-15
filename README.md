@@ -27,7 +27,7 @@
 * contains Viewport:IViewport 
 * Viewport has 2 properties
     1) bool IsRendered { get; }
-        * Changes to true After JSRuntime is available and event listeners are registeres
+        * Changes to true After JSRuntime is available and event listeners are registered
     2) Breakpoint Breakpoint { get; }
         * provides current breakpoint
     

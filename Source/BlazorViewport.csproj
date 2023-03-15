@@ -4,6 +4,18 @@
     <TargetFramework>net7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <PackageId>JxdTech.BlazorViewport</PackageId>
+    <Title>BlazorViewport</Title>
+    <Authors>Jxd Tech(Ramon D.)</Authors>
+    <Description>Monitors viewport resize and reports breakpoint changes.</Description>
+    <Copyright>Copyright (c) 2023 JxdTech</Copyright>
+    <PackageProjectUrl>https://github.com/JxdTech/BlazorViewport.git</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/JxdTech/BlazorViewport.git</RepositoryUrl>
+    <RepositoryType>GitHub</RepositoryType>
+    <PackageTags>Blazor Viewport, Breakpoints</PackageTags>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Company>Jxd Tech</Company>
+    <Product>JxdTech.BlazorViewport</Product>
   </PropertyGroup>
 
 
